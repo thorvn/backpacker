@@ -1,0 +1,14 @@
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  button.navbar-toggler.navbar-toggler-right[type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
+    span.navbar-toggler-icon
+  = link_to (I18n.t '.tbp'), root_path, class: 'navbar-brand'
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        = link_to (I18n.t '.signin'), new_user_session_path, class: 'nav-link'
+      li.nav-item
+        = link_to (I18n.t '.signup'), new_user_registration_path, class: 'nav-link'
+    form.form-inline.my-2.my-lg-0
+      input.form-control.mr-sm-2[type="text" placeholder="Search"]
+      button.btn.btn-outline-success.my-2.my-sm-0[type="submit"]
+        | Search

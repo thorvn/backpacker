@@ -2,12 +2,11 @@ doctype html
 html
   head
     title
-      | Tbp
+      = I18n.t 'tbp'
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render 'layouts/navbar'
-    div class='container'
-      = yield
+    = yield
     = javascript_pack_tag 'application'

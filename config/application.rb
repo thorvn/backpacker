@@ -15,5 +15,6 @@ module Tbp
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.i18n.default_locale = :vi
+    config.generators.javascript_engine :js
   end
 end

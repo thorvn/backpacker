@@ -1,14 +1,24 @@
-nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
-  button.navbar-toggler.navbar-toggler-right[type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
+nav#mainNav.navbar.fixed-top.navbar-toggleable-md.navbar-light
+  button.navbar-toggler.navbar-toggler-right[type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation"]
     span.navbar-toggler-icon
-  = link_to (I18n.t '.tbp'), root_path, class: 'navbar-brand'
-  #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.mr-auto
-      li.nav-item
-        = link_to (I18n.t '.signin'), new_user_session_path, class: 'nav-link'
-      li.nav-item
-        = link_to (I18n.t '.signup'), new_user_registration_path, class: 'nav-link'
-    form.form-inline.my-2.my-lg-0
-      input.form-control.mr-sm-2[type="text" placeholder="Search"]
-      button.btn.btn-outline-success.my-2.my-sm-0[type="submit"]
-        | Search
+  .container
+    a.navbar-brand[href="/"]
+      = I18n.t 'tbp'
+    #navbarExample.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        - if current_user
+          li.nav-item
+            = link_to (I18n.t 'find trips'), "/", class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'post'), "/", class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'notification'), "/", class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'signout'), destroy_user_session_path, method: :delete, class: 'nav-link'
+        - else
+          li.nav-item
+            = link_to (I18n.t 'about'), new_user_session_path, class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'signin'), new_user_session_path, class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'contact'), new_user_session_path, class: 'nav-link'

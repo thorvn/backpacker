@@ -5,9 +5,13 @@ body {
     height: 100%;
 }
 
+.page {
+  margin-top: 20px;
+}
+
 body {
     @include serif-font;
-    padding-top: 54px;
+    padding-top: 45px;
 }
 
 hr {

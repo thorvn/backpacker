@@ -2,6 +2,8 @@
   "name": "tbp",
   "private": true,
   "dependencies": {
+    "@types/react": "^15.0.28",
+    "@types/react-dom": "^15.5.0",
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.1",
     "babel-loader": "7.x",
@@ -20,12 +22,13 @@
     "postcss-loader": "^2.0.5",
     "postcss-smart-import": "^0.7.0",
     "precss": "^1.4.0",
-    "prop-types": "^15.5.10",
     "rails-erb-loader": "^5.0.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.3.4",
     "webpack": "^2.5.1",
     "webpack-manifest-plugin": "^1.1.0",
     "webpack-merge": "^4.1.0"

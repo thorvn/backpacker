@@ -1,0 +1,18 @@
+vi:
+  signin: "Đăng nhập"
+  signup: "Đăng ký"
+  tbp: "Tìm bạn phượt"
+  about: "Về chúng tôi"
+  contact: "Liên hệ"
+  find trips: "Tìm chuyến đi"
+  trip: "Chuyến đi"
+  signout: "Thoát"
+  notification: "Thông báo"
+  messages: "Tin nhắn"
+  post: "Viết bài"
+  
+  devise:
+    sessions:
+      user:
+        signed_out: "Đăng xuất thành công"
+        signed_in: "Đăng nhập thành công"

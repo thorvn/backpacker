@@ -1,0 +1,32 @@
+a.new, a.edit, a.delete {
+  @extend .btn;
+
+  &:before {
+    font-family: "FontAwesome";
+    padding-right: 0.5em;
+  }
+}
+
+a.new {
+  @extend .btn-success;
+
+  &:before {
+    @extend .fa-plus
+  }
+}
+
+a.edit {
+  @extend .btn-primary;
+
+  &:before {
+    @extend .fa-pencil;
+  }
+}
+
+a.delete {
+  @extend .btn-danger;
+
+  &:before {
+    @extend .fa-trash;
+  }
+}

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  title: MyString
+  body: MyText
+  price: 1
+  image: MyString
+  start_date: 2017-05-23
+  end_date: 2017-05-23
+  number_of_member: 1
+
+two:
+  user_id: 1
+  title: MyString
+  body: MyText
+  price: 1
+  image: MyString
+  start_date: 2017-05-23
+  end_date: 2017-05-23
+  number_of_member: 1

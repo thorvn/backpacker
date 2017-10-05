@@ -1,0 +1,24 @@
+nav#mainNav.navbar.fixed-top.navbar-toggleable-md.navbar-light
+  button.navbar-toggler.navbar-toggler-right[type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation"]
+    span.navbar-toggler-icon
+  .container
+    a.navbar-brand[href="/"]
+      = I18n.t 'tbp'
+    #navbarExample.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        - if current_user
+          li.nav-item
+            = link_to (I18n.t 'find trips'), "/", class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'post'), "/", class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'notification'), "/", class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'signout'), destroy_user_session_path, method: :delete, class: 'nav-link'
+        - else
+          li.nav-item
+            = link_to (I18n.t 'about'), new_user_session_path, class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'signin'), new_user_session_path, class: 'nav-link'
+          li.nav-item
+            = link_to (I18n.t 'contact'), new_user_session_path, class: 'nav-link'

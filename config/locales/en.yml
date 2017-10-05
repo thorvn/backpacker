@@ -30,4 +30,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  signin: "Signin"
+  signup: "Signup"
+  tbp: "Backpacker"
+  about: "About me"
+  contact: "Contact"
+  find trips: "Find trips"
+  trip: "trip"
+  signout: "Signout"
+  notification: "notification"
+  messages: "messages"
+  post: "post"
+  
+  devise:
+    sessions:
+      user:
+        signed_out: "signed out success"
+        signed_in: "signed in success"

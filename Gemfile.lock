@@ -56,9 +56,6 @@ GEM
       sass (>= 3.3.4)
     brakeman (3.6.2)
     builder (3.2.3)
-    bullet (5.5.1)
-      activesupport (>= 3.0.0)
-      uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
     capybara (2.13.0)
       addressable
@@ -216,7 +213,6 @@ GEM
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.2.0)
-    uniform_notifier (1.10.0)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.5.1)
@@ -242,7 +238,6 @@ DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
   bootstrap-material-design
   brakeman
-  bullet
   byebug
   capybara (~> 2.13.0)
   coffee-rails (~> 4.2)
@@ -270,5 +265,8 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webpacker
 
+RUBY VERSION
+   ruby 2.4.1p111
+
 BUNDLED WITH
-   1.15.1
+   1.15.4

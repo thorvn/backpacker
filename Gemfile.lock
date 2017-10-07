@@ -56,9 +56,6 @@ GEM
       sass (>= 3.3.4)
     brakeman (3.6.2)
     builder (3.2.3)
-    bullet (5.5.1)
-      activesupport (>= 3.0.0)
-      uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
     capybara (2.13.0)
       addressable
@@ -67,6 +64,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (1.2.1)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.7.0)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.2.1)
@@ -216,7 +217,6 @@ GEM
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.2.0)
-    uniform_notifier (1.10.0)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.5.1)
@@ -242,9 +242,9 @@ DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
   bootstrap-material-design
   brakeman
-  bullet
   byebug
   capybara (~> 2.13.0)
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   devise
   faker
@@ -271,4 +271,4 @@ DEPENDENCIES
   webpacker
 
 BUNDLED WITH
-   1.15.1
+   1.16.0.pre.2

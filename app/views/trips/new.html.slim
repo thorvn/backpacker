@@ -1,0 +1,35 @@
+.container.box-center
+  .row
+    .col-md-8
+      h3 New Trip
+      = form_for @trip do |f|
+        .form-group
+          = f.label :title
+          = f.text_field :title, :class => 'form-control'
+
+        .form-group
+          = f.label :body
+          = f.text_area :body, :class => 'form-control'
+
+        .form-group
+          = f.label :price
+          = f.text_field :price, :class => 'form-control'
+        
+        .form-group
+          = f.label :start_date
+          = f.date_field :start_date, :class => 'form-control'
+
+        .form-group
+          = f.label :end_date
+          = f.date_field :end_date, :class => 'form-control'
+
+        .form-group
+          = f.label :number_of_member
+          = f.number_field :number_of_member, :class => 'form-control'
+        
+        .form-group
+          = f.label :image
+          = f.file_field :image, :class => 'form-control'
+
+        = f.submit 'Post Trip', :class => 'btn btn-primary'
+

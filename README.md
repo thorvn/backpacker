@@ -3,6 +3,20 @@
 A website to connect people love backpacking.
 You can post a trip, introduce somewhere you want to go and find someone want to go with you. Or find help from someone
 
+## Teachnogogy
+
+- Ruby On Rails (Backend)
+- ReactJS (frontend)
+- Postgresql (database)
+- Redis to cache session and query
+
+## Contributing
+
+1. Fork it! (maybe and start it ^^)
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request to develop branch :D
 
 ## How to run
 

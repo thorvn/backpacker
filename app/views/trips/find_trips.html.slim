@@ -1,0 +1,48 @@
+= form_tag("/find_trips", method: "get", enforce_utf8: false) do
+  .container
+    .row
+      .col-lg-3.col-md-6.col-md-offset-3.col-lg-offset-0
+        .well
+          h3 align="center"  Find trips
+          form.form-horizontal
+            .form-group
+              label.control-label for="price"  Price
+              .input-group
+                #basic-addon2.input-group-addon
+                  span.glyphicon.glyphicon-usd
+                = text_field_tag 'trip[price]', nil, class: 'form-control'
+            .form-group
+              label.control-label for="number-of-members"  Number of members
+              .input-group
+                #basic-addon2.input-group-addon
+                  span.glyphicon.glyphicon-user
+                = text_field_tag 'trip[number]', nil, class: 'form-control'
+            .form-group
+              label.control-label for="start-date"  Start date
+              .input-group
+                #basic-addon2.input-group-addon
+                  span.glyphicon.glyphicon-calendar
+                = text_field_tag 'trip[start_date]', nil, placeholder: 'yyyy-mm-dd', class: 'form-control'
+            .form-group
+              label.control-label for="end-date"  End date
+              .input-group
+                #basic-addon2.input-group-addon
+                  span.glyphicon.glyphicon-calendar
+                = text_field_tag 'trip[end_date]', nil, placeholder: 'yyyy-mm-dd', class: 'form-control'
+            p.text-center
+              = submit_tag('Search', name: nil, class: "btn btn-danger")
+      .col
+        .well
+          h2 Available trips
+          table.table.table-hover
+            thead
+              tr
+                th Title
+                th Price
+                th Time spone
+            tbody
+              - @trips.any? && @trips.each do |trip|
+                tr
+                  td = trip.title
+                  td = trip.price
+                  td = "#{trip.start_date} - #{trip.end_date}"

@@ -4,19 +4,8 @@ class TripsController < ApplicationController
 
   end
 
-  def available_trips
-    trips = Trip.available_trips
-    trips = trips.pricing(trip_params[:price])
-    trips = trips.range_of_time(trip_params[:start_date], trip_params[:end_date])
-    trips = trips.members(trip_params[:number_of_member])
-
-    render json: trips
+  def find_trips
+    @trips = Trip.available(current_user.id)
+    @trips = Trip.search(params[:trip], current_user.id) if params && params[:trip]
   end
-
-  private
-
-  def trip_params
-
-  end
-
 end

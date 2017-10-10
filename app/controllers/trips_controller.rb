@@ -1,6 +1,7 @@
 class TripsController < ApplicationController
 
   def index
+    @trips = Trip.all
   end
 
   def new
@@ -18,5 +19,4 @@ class TripsController < ApplicationController
     params.require(:trip).permit(:title, :body, :price, :start_date,
                                  :end_date, :number_of_member, :image)
   end
-
 end

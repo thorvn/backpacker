@@ -1,6 +1,18 @@
 .container.page
-  div#root
-  div#title
-  div#body
-
-  = javascript_pack_tag 'index_react'
+  .row
+    - @trips.each do |trip|
+      .col-md-6
+        .card
+          = image_tag(trip.image, :class => 'card-img-top img-fluid')
+          .card-body
+            h4.card-title 
+              = trip.title
+            p.card-text
+              = truncate(trip.body, length: 100)
+            p.card-text
+              = fa_icon "money"
+              = trip.price
+            p.card-text
+              = fa_icon "clock-o"
+              = " #{trip.start_date} - #{trip.end_date}"
+            a.btn.btn-primary href="#"  Details

@@ -7,7 +7,7 @@ describe "Trip Requests" , type: :request do
   describe "find trips" do
     it "should return one trip" do
 
-      get '/find_trips', params: { trip: { price: 20} }
+      get '/find_trips', params: { trip: { price: 20, start_date: Date.today + 3.days} }
       expect(response).to be_success
       expect(response.body).to include("Trip two")
     end

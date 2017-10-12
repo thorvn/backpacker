@@ -5,7 +5,7 @@ class TripsController < ApplicationController
   end
 
   def find_trips
-    @trips = Trip.available(current_user.id)
-    @trips = Trip.search(params[:trip], current_user.id) if params && params[:trip]
+    @trips = Trip.available
+    @trips = Trip.search(@trips, params[:trip]) if params && params[:trip]
   end
 end

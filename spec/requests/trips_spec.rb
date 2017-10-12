@@ -6,7 +6,6 @@ describe "Trip Requests" , type: :request do
 
   describe "find trips" do
     it "should return one trip" do
-      login_user
 
       get '/find_trips', params: { trip: { price: 20} }
       expect(response).to be_success

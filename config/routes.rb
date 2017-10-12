@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   authenticated :user do
     root 'trips#index', as: :authenticated_root
-    get 'find_trips' => 'trips#find_trips'
   end
+
+  get 'find_trips' => 'trips#find_trips'
 
   root 'home#index'
 

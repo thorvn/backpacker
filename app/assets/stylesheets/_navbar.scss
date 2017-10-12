@@ -46,6 +46,7 @@
         border-color: fade-out(white, .7);
         background-color: #3c3c90;
         .navbar-brand {
+            padding-top: 15px;
             color: fade-out(white, .3);
             &:hover,
             &:focus {

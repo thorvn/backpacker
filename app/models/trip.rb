@@ -9,7 +9,7 @@ class Trip < ApplicationRecord
     trips = trips.where("price <= ?", trip_params[:price]) if trip_params[:price]
     trips = trips.where("number_of_member = ?", trip_params[:number]) if trip_params[:number]
     trips = trips.where("start_date = ?", trip_params[:start_date]) if trip_params[:start_date]
-    trips = trips.where("end_date = ?", trip_params[:end_date])if trip_params[:end_date]
+    trips = trips.where("end_date = ?", trip_params[:end_date]) if trip_params[:end_date]
     trips
   end
 

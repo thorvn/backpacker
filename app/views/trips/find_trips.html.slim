@@ -10,25 +10,25 @@
               .input-group
                 #basic-addon2.input-group-addon
                   span.glyphicon.glyphicon-usd
-                = text_field_tag 'trip[price]', nil, class: 'form-control'
+                = number_field_tag 'trip[price]', class: 'form-control'
             .form-group
               label.control-label for="number-of-members"  Number of members
               .input-group
                 #basic-addon2.input-group-addon
                   span.glyphicon.glyphicon-user
-                = text_field_tag 'trip[number]', nil, class: 'form-control'
+                = number_field_tag 'trip[number]', class: 'form-control'
             .form-group
               label.control-label for="start-date"  Start date
               .input-group
                 #basic-addon2.input-group-addon
                   span.glyphicon.glyphicon-calendar
-                = text_field_tag 'trip[start_date]', nil, placeholder: 'yyyy-mm-dd', class: 'form-control'
+                = date_field_tag 'trip[start_date]', class: 'form-control'
             .form-group
               label.control-label for="end-date"  End date
               .input-group
                 #basic-addon2.input-group-addon
                   span.glyphicon.glyphicon-calendar
-                = text_field_tag 'trip[end_date]', nil, placeholder: 'yyyy-mm-dd', class: 'form-control'
+                = date_field_tag 'trip[end_date]', class: 'form-control'
             p.text-center
               = submit_tag('Search', name: nil, class: "btn btn-danger")
       .col

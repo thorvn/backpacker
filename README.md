@@ -22,12 +22,13 @@ You can post a trip, introduce somewhere you want to go and find someone want to
 
 Make sure you install `yarn` and install all package dependent
 
-```
+```bash
 yarn install
+bundle install
 ```
 
-Run 
-```
+Run
+```bash
 bin/server
 ```
 

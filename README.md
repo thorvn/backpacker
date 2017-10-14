@@ -20,11 +20,14 @@ You can post a trip, introduce somewhere you want to go and find someone want to
 
 ## How to run
 
-Make sure you install `yarn` and install all package dependent
+Make sure you install `yarn` and install all package dependent. You will need Bundler, Ruby, and PostgreSQL.
 
 ```bash
 yarn install
 bundle install
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:seed
 ```
 
 Run
@@ -32,4 +35,4 @@ Run
 bin/server
 ```
 
-Open your browser: localhost:3000
+Open your browser: [localhost:3000](http://localhost:3000/)

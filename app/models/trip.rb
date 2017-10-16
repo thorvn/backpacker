@@ -4,13 +4,18 @@ class Trip < ApplicationRecord
     where("start_date >= ? and user_id is null", Date.today).order("created_at DESC")
   end
 
-  def self.search(trips, trip_params)
-    trip_params = trip_params.reject{|_, v| v.blank?}
-    trips = trips.where("price <= ?", trip_params[:price]) if trip_params[:price]
-    trips = trips.where("number_of_member = ?", trip_params[:number]) if trip_params[:number]
-    trips = trips.where("start_date = ?", trip_params[:start_date]) if trip_params[:start_date]
-    trips = trips.where("end_date = ?", trip_params[:end_date]) if trip_params[:end_date]
-    trips
+  def self.search(trip_params)
+    query = ""
+    if trip_params[:price]
+      query << "and price <= #{trip_params[:price].to_i} "
+    elsif trip_params[:number]
+      query << "and number_of_member = #{trip_params[:number].to_i} "
+    elsif trip_params[:start_date]
+      query << "and start_date = '#{trip_params[:start_date].to_date}' "
+    elsif trip_params[:end_date]
+      query << "and end_date = '#{trip_params[:end_date].to_date}' "
+    end
+    query.empty? ? [] : Trip.where("user_id is null #{query}")
   end
 
 end

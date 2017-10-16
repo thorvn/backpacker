@@ -33,6 +33,11 @@
               = submit_tag('Search', name: nil, class: "btn btn-danger")
       .col
         .well
+          - if flash[:alert]
+            .alert.alert-warning role="alert"
+              strong We`re sorry.
+              = flash[:alert]
+
           h2 Available trips
           table.table.table-hover
             thead
@@ -41,7 +46,7 @@
                 th Price
                 th Time spone
             tbody
-              - @trips.any? && @trips.each do |trip|
+              - @trips && @trips.each do |trip|
                 tr
                   td = trip.title
                   td = trip.price

@@ -8,7 +8,7 @@ nav#mainNav.navbar.fixed-top.navbar-toggleable-md.navbar-light
       ul.navbar-nav.ml-auto
         - if current_user
           li.nav-item
-            = link_to (I18n.t 'find trips'), "/", class: 'nav-link'
+            = link_to (I18n.t 'find trips'), find_trips_path, class: 'nav-link'
           li.nav-item
             = link_to (I18n.t 'post'), "/", class: 'nav-link'
           li.nav-item

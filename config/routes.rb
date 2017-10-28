@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   get 'find_trips' => 'trips#find_trips'
+  get 'search' => 'trips#search'
 
   root 'home#index'
 
